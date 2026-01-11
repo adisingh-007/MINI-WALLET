@@ -1,0 +1,402 @@
+/* ===============================
+   GLOBAL SCALE (IMPORTANT)
+================================ */
+html {
+  font-size: 14px; /* default was 16px */
+}
+
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #111827;
+}
+
+/* ===============================
+   SIDEBAR (DESKTOP)
+================================ */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  z-index: 100;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.sidebar-logo {
+  font-size: 32px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+.main-content {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  padding: 24px 20px;
+  padding-bottom: 96px;
+  min-height: 100vh;
+}
+
+/* ===============================
+   CARD SYSTEM
+================================ */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   BALANCE CARD
+================================ */
+.credit-card {
+  width: 640px;
+  height: 300px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-top,
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-bottom > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-bank {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.card-type {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-balance {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.card-number {
+  font-size: 22px;
+  letter-spacing: 5px;
+  opacity: 0.9;
+}
+
+.card-label {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.card-value {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===============================
+   FORMS
+================================ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1.5px solid #e5e7eb;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button {
+  padding: 10px 16px;
+  background-color: #dc0606;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #740505;
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* CONFIRM ACTIONS */
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.confirm-actions button {
+  flex: 1;
+}
+
+.cancel-btn {
+  background-color: #9ca3af;
+}
+
+.cancel-btn:hover {
+  background-color: #6b7280;
+}
+
+/* ===============================
+   TRANSACTIONS
+================================ */
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 110px 70px;
+  gap: 12px;
+  align-items: center;
+}
+
+.tx-date {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.tx-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tx-recipient,
+.tx-fee {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.tx-amount {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.tx-amount.credit {
+  color: #16a34a;
+}
+
+.tx-amount.debit {
+  color: #dc2626;
+}
+
+.tx-failed {
+  color: #dc2626;
+  font-size: 11px;
+}
+
+/* ===============================
+   FILTERS
+================================ */
+.filters {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 14px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 18px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.clear-filters {
+  align-self: flex-end;
+  background: #ef4444;
+}
+
+.clear-filters:hover {
+  background: #dc2626;
+}
+
+/* ===============================
+   FEEDBACK
+================================ */
+.error,
+.success {
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.error {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.success {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.count-text {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ===============================
+   MOBILE VIEW
+================================ */
+@media (max-width: 768px) {
+
+  .sidebar {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sidebar-header {
+    display: none;
+  }
+
+  .sidebar-menu {
+    margin-top: 6px;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 96px;
+  }
+
+  .credit-card {
+    width: 100%;
+    height: 260px;
+    padding: 16px;
+  }
+
+  .card-balance {
+    font-size: 32px;
+  }
+
+  .card-number {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+
+  .transaction-item {
+    position: relative;
+    padding-right: 56px;
+  }
+
+  .tx-action {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
