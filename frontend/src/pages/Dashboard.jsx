@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import BalanceCard from "../components/Balancecard";
 import TransactionList from "../components/TransactionList";
 import api from "../services/api";
+import QrCard from "../components/QrCard";
+
 
 export default function Dashboard({ balance }) {
   const [transactions, setTransactions] = useState([]);
@@ -36,10 +38,14 @@ export default function Dashboard({ balance }) {
   return (
     <div className="dashboard">
 
-      {/* BALANCE CARD ONLY */}
+      {/* Top Section */}
       <div className="dashboard-top">
         <div className="dashboard-card">
           <BalanceCard balance={balance} />
+        </div>
+
+        <div className="dashboard-card">
+          <QrCard />
         </div>
       </div>
 
