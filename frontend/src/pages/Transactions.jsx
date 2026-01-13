@@ -38,9 +38,7 @@ export default function Transactions() {
     }
   };
 
-  /* ===============================
-     TIME FILTER LOGIC
-  ================================ */
+ // time filtering logic
   const now = Date.now();
 
   const filteredTransactions = transactions.filter((tx) => {

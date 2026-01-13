@@ -259,6 +259,7 @@ button:disabled {
   display: flex;
   gap: 12px;
   margin-top: 12px;
+  width: 100px;
 }
 
 .confirm-actions button {
@@ -266,7 +267,7 @@ button:disabled {
 }
 
 .cancel-btn {
-  background-color: #9ca3af;
+  background-color: #2563eb;
 }
 
 .cancel-btn:hover {

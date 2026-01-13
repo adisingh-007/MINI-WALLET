@@ -46,7 +46,7 @@ export default function TransferMoney({ balance, onTransfer }) {
       amount,
       recipient: recipientName,
       fee,
-      date: new Date().toISOString() // ✅ DATE + TIME
+      date: new Date().toISOString() 
     };
 
     try {

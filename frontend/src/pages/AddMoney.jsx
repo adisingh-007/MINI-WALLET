@@ -25,7 +25,7 @@ export default function AddMoney({ onAddMoney }) {
         type: "credit",
         amount,
         status: "success",
-        date: new Date().toISOString() // ✅ DATE + TIME
+        date: new Date().toISOString() 
       });
 
       onAddMoney(amount);
